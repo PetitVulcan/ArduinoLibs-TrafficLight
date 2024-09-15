@@ -17,49 +17,48 @@ La bibliothèque **TrafficLight** permet de simuler un système de feux tricolor
 ## Classe TrafficLight
 
 ### Constructeur
-
 ```cpp
 TrafficLight(int orangePin, int greenPin, int redPin, bool logState);
 ```
-### Description
-
- Crée un nouvel objet TrafficLight en spécifiant les broches de connexion pour les LED rouges, oranges, et vertes. Active ou désactive également les logs via le moniteur série.
+#### Description
+- Crée un nouvel objet `TrafficLight` en spécifiant les broches de connexion pour les LED rouges, oranges, et vertes.
+- Active ou désactive également les logs via le moniteur série.
 
 ### Paramètres :
 
-- orangePin : Broche de connexion de la LED orange.
-- greenPin : Broche de connexion de la LED verte.
-- redPin : Broche de connexion de la LED rouge.
-- logState : Active (true) ou désactive (false) les logs d'état dans le moniteur série.
+- `orangePin` : Broche de connexion de la LED orange.
+- `greenPin` : Broche de connexion de la LED verte.
+- `redPin` : Broche de connexion de la LED rouge.
+- `logState` : Active (true) ou désactive (false) les logs d'état dans le moniteur série.
 
 ### Méthodes principales
 
 ```cpp
 void init()
 ```
-Description : Initialise les pins des LED et effectue un test en allumant successivement chaque couleur.
+##### - Initialise les pins des LED et effectue un test en allumant successivement chaque couleur.
 
 ```cpp
 void red()
 ```
-Description : Allume uniquement la LED rouge.
+##### - Allume uniquement la LED rouge.
 
 ```cpp
 void orange()
 ```
-Description : Allume uniquement la LED orange.
+##### - Allume uniquement la LED orange.
 
 ```cpp
 void green()
 ```
-Description : Allume uniquement la LED verte.
+##### - Allume uniquement la LED verte.
 
 ```cpp
 void cycle(int redTime, int orangeTime, int greenTime)
 ```
-Description : Exécute un cycle complet de feu en allumant successivement la LED rouge, orange, puis verte, en respectant les temps définis pour chaque couleur.
+##### - Exécute un cycle complet de feu en allumant successivement la LED rouge, orange, puis verte, en respectant les temps définis pour chaque couleur.
 
-Paramètres :
+##### Paramètres :
 - `redTime` : Durée du feu rouge en millisecondes.
 - `orangeTime` : Durée du feu orange en millisecondes.
 - `greenTime` : Durée du feu vert en millisecondes.
@@ -67,9 +66,9 @@ Paramètres :
 ```cpp
 void runIntersectionCycle(TrafficLight feuRue1, TrafficLight feuRue2, int redTime, int orangeTime, int greenTime, int pauseTime)
 ```
-Description : Synchronise deux feux tricolores pour une intersection, en s'assurant que les deux rues ne sont pas vertes simultanément.
+##### Synchronise deux feux tricolores pour une intersection, en s'assurant que les deux rues ne sont pas vertes simultanément.
 
-Paramètres :
+##### Paramètres :
 - `feuRue1` : Objet TrafficLight pour la rue 1.
 - `feuRue2` : Objet TrafficLight pour la rue 2.
 - `redTime` : Durée du feu rouge.
@@ -80,15 +79,15 @@ Paramètres :
 ```cpp
 void blinkOrange(unsigned long duration)
 ```
-Description : Fait clignoter la LED orange pendant une durée spécifiée.
+##### - Fait clignoter la LED orange pendant une durée spécifiée.
 
-Paramètres :
+##### Paramètres :
 - `duration` : Durée du clignotement en millisecondes.
 
 ```cpp
 void allOff()
 ```
-Description : Éteint toutes les LED.
+##### - Éteint toutes les LED.
 
 ### Méthodes privées
 
@@ -97,24 +96,25 @@ Les méthodes suivantes sont utilisées en interne dans la classe TrafficLight :
 ```cpp
 void setLights(bool redState, bool orangeState, bool greenState) 
 ```
-Description : Modifie l'état des LED rouge, orange, et verte.
+##### - Modifie l'état des LED rouge, orange, et verte.
 
 
 ```cpp
 void logPhase(const char *phaseName, int remainingTime) 
 ```
-Description : Enregistre l'état des feux dans le moniteur série.
+##### - Enregistre l'état des feux dans le moniteur série.
 
 
 ```cpp
 int computeRemainingTime()
 ```
-Description : Calcule le temps restant avant le prochain changement de phase.
+##### - Calcule le temps restant avant le prochain changement de phase.
 
 
 ### Exemple d'utilisation
 
-```cpp TrafficLight.ino
+`TrafficLight.ino`
+```cpp 
 #include <Arduino.h>
 #include "TrafficLight.h"
 
