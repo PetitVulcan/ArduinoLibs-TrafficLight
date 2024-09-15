@@ -145,4 +145,4 @@ void loop()
 ### Licence
 Version 1.0.0 - Septembre 2024
 
-Pour plus d'informations, consultez [www.petitvulcan.com](http://petitculcan.com).
+Pour plus d'informations, consultez [www.petitvulcan.com](https://petitvulcan.com).
