@@ -60,9 +60,9 @@ void cycle(int redTime, int orangeTime, int greenTime)
 Description : Exécute un cycle complet de feu en allumant successivement la LED rouge, orange, puis verte, en respectant les temps définis pour chaque couleur.
 
 Paramètres :
-- redTime : Durée du feu rouge en millisecondes.
-- orangeTime : Durée du feu orange en millisecondes.
-- greenTime : Durée du feu vert en millisecondes.
+- `redTime` : Durée du feu rouge en millisecondes.
+- `orangeTime` : Durée du feu orange en millisecondes.
+- `greenTime` : Durée du feu vert en millisecondes.
 
 ```cpp
 void runIntersectionCycle(TrafficLight feuRue1, TrafficLight feuRue2, int redTime, int orangeTime, int greenTime, int pauseTime)
@@ -70,12 +70,12 @@ void runIntersectionCycle(TrafficLight feuRue1, TrafficLight feuRue2, int redTim
 Description : Synchronise deux feux tricolores pour une intersection, en s'assurant que les deux rues ne sont pas vertes simultanément.
 
 Paramètres :
-- feuRue1 : Objet TrafficLight pour la rue 1.
-- feuRue2 : Objet TrafficLight pour la rue 2.
-- redTime : Durée du feu rouge.
-- orangeTime : Durée du feu orange.
-- greenTime : Durée du feu vert.
-- pauseTime : Durée de la pause où les deux rues sont au rouge.
+- `feuRue1` : Objet TrafficLight pour la rue 1.
+- `feuRue2` : Objet TrafficLight pour la rue 2.
+- `redTime` : Durée du feu rouge.
+- `orangeTime` : Durée du feu orange.
+- `greenTime` : Durée du feu vert.
+- `pauseTime` : Durée de la pause où les deux rues sont au rouge.
 
 ```cpp
 void blinkOrange(unsigned long duration)
@@ -83,7 +83,7 @@ void blinkOrange(unsigned long duration)
 Description : Fait clignoter la LED orange pendant une durée spécifiée.
 
 Paramètres :
-- duration : Durée du clignotement en millisecondes.
+- `duration` : Durée du clignotement en millisecondes.
 
 ```cpp
 void allOff()
@@ -95,16 +95,22 @@ Description : Éteint toutes les LED.
 Les méthodes suivantes sont utilisées en interne dans la classe TrafficLight :
 
 ```cpp
-void setLights(bool redState, bool orangeState, bool greenState) : Modifie l'état des LED rouge, orange, et verte.
+void setLights(bool redState, bool orangeState, bool greenState) 
 ```
+Description : Modifie l'état des LED rouge, orange, et verte.
+
 
 ```cpp
-void logPhase(const char *phaseName, int remainingTime) : Enregistre l'état des feux dans le moniteur série.
+void logPhase(const char *phaseName, int remainingTime) 
 ```
+Description : Enregistre l'état des feux dans le moniteur série.
+
 
 ```cpp
-int computeRemainingTime() : Calcule le temps restant avant le prochain changement de phase.
+int computeRemainingTime()
 ```
+Description : Calcule le temps restant avant le prochain changement de phase.
+
 
 ### Exemple d'utilisation
 
