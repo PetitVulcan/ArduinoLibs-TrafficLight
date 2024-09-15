@@ -58,6 +58,7 @@ Description : Allume uniquement la LED verte.
 void cycle(int redTime, int orangeTime, int greenTime)
 ```
 Description : Exécute un cycle complet de feu en allumant successivement la LED rouge, orange, puis verte, en respectant les temps définis pour chaque couleur.
+
 Paramètres :
 - redTime : Durée du feu rouge en millisecondes.
 - orangeTime : Durée du feu orange en millisecondes.
@@ -67,6 +68,7 @@ Paramètres :
 void runIntersectionCycle(TrafficLight feuRue1, TrafficLight feuRue2, int redTime, int orangeTime, int greenTime, int pauseTime)
 ```
 Description : Synchronise deux feux tricolores pour une intersection, en s'assurant que les deux rues ne sont pas vertes simultanément.
+
 Paramètres :
 - feuRue1 : Objet TrafficLight pour la rue 1.
 - feuRue2 : Objet TrafficLight pour la rue 2.
@@ -79,6 +81,7 @@ Paramètres :
 void blinkOrange(unsigned long duration)
 ```
 Description : Fait clignoter la LED orange pendant une durée spécifiée.
+
 Paramètres :
 - duration : Durée du clignotement en millisecondes.
 
