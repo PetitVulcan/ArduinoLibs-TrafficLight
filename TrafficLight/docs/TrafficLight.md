@@ -2,7 +2,9 @@
 
 ## Introduction
 
-La bibliothèque **TrafficLight** permet de simuler un système de feux tricolores avec des LED contrôlées via une carte Arduino. Elle est conçue pour contrôler deux feux de circulation dans une intersection, avec des options pour le logging des états des feux via le moniteur série.
+La bibliothèque **TrafficLight** permet de simuler un système de feux tricolores avec des LED contrôlées via une carte Arduino. Elle est conçue afin d'assurer la syncronisation des feux de circulation pour une intersection entre deux rues. 
+
+**TrafficLight** offre la possibilité le séléctionner la pin de raccordement pour chaque couleur du feu et offre également une option pour le log d'états des feux via le moniteur série.
 
 ---
 
