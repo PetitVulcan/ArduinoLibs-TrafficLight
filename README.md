@@ -2,7 +2,9 @@
 
 ## Introduction
 
-La bibliothèque **TrafficLight** permet de simuler un système de feux tricolores avec des LED contrôlées via une carte Arduino. Elle est conçue pour contrôler deux feux de circulation dans une intersection, avec des options pour le logging des états des feux via le moniteur série.
+La bibliothèque **TrafficLight** permet de simuler un système de feux tricolores avec des LED contrôlées via une carte Arduino. Elle est conçue afin d'assurer la syncronisation des feux de circulation pour une intersection entre deux rues. 
+
+**TrafficLight** offre la possibilité le séléctionner la pin de raccordement pour chaque couleur du feu et offre également une option pour le log d'états des feux via le moniteur série.
 
 ---
 
@@ -21,7 +23,7 @@ La bibliothèque **TrafficLight** permet de simuler un système de feux tricolor
 TrafficLight(int orangePin, int greenPin, int redPin, bool logState);
 ```
 #### Description
-- Crée un nouvel objet `TrafficLight` en spécifiant les broches de connexion pour les LED rouges, oranges, et vertes.
+- Crée un nouvel objet `TrafficLight` en spécifiant les broches de connexion pour les LED oranges, vertes et rouges.
 - Active ou désactive également les logs via le moniteur série.
 
 ### Paramètres :
@@ -118,7 +120,7 @@ int computeRemainingTime()
 #include <Arduino.h>
 #include "TrafficLight.h"
 
-// Définir les pins pour les LED des deux feux tricolores
+// Création d'un objet Feu Tricolor avec en paramètres les pins pour les LED de chaque feu ainsi que l'option pour les logs d'état
 TrafficLight road1(2, 3, 4, true);  // Rue 1
 TrafficLight road2(8, 9, 10, true); // Rue 2
 
@@ -145,4 +147,4 @@ void loop()
 ### Licence
 Version 1.0.0 - Septembre 2024
 
-Pour plus d'informations, consultez [www.petitvulcan.com](http://petitculcan.com).
+Pour plus d'informations, consultez [www.petitvulcan.com](http://petitvulcan.com).
