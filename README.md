@@ -22,7 +22,7 @@ La bibliothèque **TrafficLight** permet de simuler un système de feux tricolor
 ```cpp
 TrafficLight(int orangePin, int greenPin, int redPin, bool logState);
 ```
-#### Description
+### Description
 - Crée un nouvel objet `TrafficLight` en spécifiant les broches de connexion pour les LED oranges, vertes et rouges.
 - Active ou désactive également les logs via le moniteur série.
 
@@ -38,29 +38,29 @@ TrafficLight(int orangePin, int greenPin, int redPin, bool logState);
 ```cpp
 void init()
 ```
-##### - Initialise les pins des LED et effectue un test en allumant successivement chaque couleur.
+#### - Initialise les pins des LED et effectue un test en allumant successivement chaque couleur.
 
 ```cpp
 void red()
 ```
-##### - Allume uniquement la LED rouge.
+#### - Allume uniquement la LED rouge.
 
 ```cpp
 void orange()
 ```
-##### - Allume uniquement la LED orange.
+#### - Allume uniquement la LED orange.
 
 ```cpp
 void green()
 ```
-##### - Allume uniquement la LED verte.
+#### - Allume uniquement la LED verte.
 
 ```cpp
 void cycle(int redTime, int orangeTime, int greenTime)
 ```
-##### - Exécute un cycle complet de feu en allumant successivement la LED rouge, orange, puis verte, en respectant les temps définis pour chaque couleur.
+#### - Exécute un cycle complet de feu en allumant successivement la LED rouge, orange, puis verte, en respectant les temps définis pour chaque couleur.
 
-##### Paramètres :
+### Paramètres :
 - `redTime` : Durée du feu rouge en millisecondes.
 - `orangeTime` : Durée du feu orange en millisecondes.
 - `greenTime` : Durée du feu vert en millisecondes.
@@ -68,9 +68,9 @@ void cycle(int redTime, int orangeTime, int greenTime)
 ```cpp
 void runIntersectionCycle(TrafficLight feuRue1, TrafficLight feuRue2, int redTime, int orangeTime, int greenTime, int pauseTime)
 ```
-##### Synchronise deux feux tricolores pour une intersection, en s'assurant que les deux rues ne sont pas vertes simultanément.
+#### Synchronise deux feux tricolores pour une intersection, en s'assurant que les deux rues ne sont pas vertes simultanément.
 
-##### Paramètres :
+### Paramètres :
 - `feuRue1` : Objet TrafficLight pour la rue 1.
 - `feuRue2` : Objet TrafficLight pour la rue 2.
 - `redTime` : Durée du feu rouge.
@@ -81,15 +81,15 @@ void runIntersectionCycle(TrafficLight feuRue1, TrafficLight feuRue2, int redTim
 ```cpp
 void blinkOrange(unsigned long duration)
 ```
-##### - Fait clignoter la LED orange pendant une durée spécifiée.
+#### - Fait clignoter la LED orange pendant une durée spécifiée.
 
-##### Paramètres :
+### Paramètres :
 - `duration` : Durée du clignotement en millisecondes.
 
 ```cpp
 void allOff()
 ```
-##### - Éteint toutes les LED.
+#### - Éteint toutes les LED.
 
 ### Méthodes privées
 
